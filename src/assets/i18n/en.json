@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "home": {
+      "buttonTextToList": "Go to hero list",
+      "titleContent": "Let's know a little about Marvel heroes"
+    },
+    "heroList": {
+      "titleToolbar": "Marvel's hero"
+    },
+    "heroDetail": {
+      "comics": "Available comics",
+      "series": "Available series",
+      "stories": "Available stories"
+
+    }
+  }
+}

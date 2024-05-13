@@ -1,0 +1,41 @@
+ion-content {
+  --background: #f4f4f4; /* Fondo claro para que los elementos resalten */
+}
+
+ion-list {
+  padding: 0;
+}
+
+ion-item {
+  background: #fff;
+  border-radius: 8px;
+  margin: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 8px;
+}
+
+ion-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Efecto hover para interactividad */
+}
+
+ion-avatar {
+  --border-radius: 50%; /* Avatares redondos para los héroes */
+  width: 60px; /* Tamaño del avatar */
+  height: 60px;
+}
+
+ion-label {
+  --ion-text-color: #333; /* Color del texto oscuro para mejor lectura */
+}
+
+h2 {
+  font-weight: bold;
+  color: #d10024; /* Color rojo Marvel para títulos */
+}
+
+p {
+  font-size: 0.8em;
+  color: #666; /* Descripción en color más suave */
+}

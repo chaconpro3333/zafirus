@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "home": {
+      "buttonTextToList": "Ver Heroes de Marvel",
+      "titleContent": "Conozcamos un poco sobre los heroes de marvel"
+    },
+    "heroList": {
+      "titleToolbar": "Heroes de Marvel"
+    },
+    "heroDetail": {
+      "comics": "Comics disponibles",
+      "series": "Series disponibles",
+      "stories": "Historias disponibles"
+
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<app-header [title]="'pages.heroList.titleToolbar' | translate"> </app-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="!isLoading; else spinner">
+    <ion-list>
+      <ion-item
+        *ngFor="let item of heros"
+        lines="none"
+        (click)="goToDetail(item)"
+      >
+        <ng-container
+          *ngTemplateOutlet="avatar; context: { item }"
+        ></ng-container>
+        <ion-label>
+          <h2>{{ item?.name }}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll *ngIf="heros.length < rowsLimits" (ionInfinite)="loadMarvelHeros($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ng-container>
+</ion-content>
+
+<ng-template #avatar let-item="item">
+  <ng-container *ngIf="item?.thumbnail?.path && item.thumbnail.extension">
+    <ion-avatar slot="start">
+      <img [src]="item?.thumbnail?.path +'.'+ item.thumbnail.extension" />
+    </ion-avatar>
+  </ng-container>
+</ng-template>
+
+<ng-template #spinner>
+  <div class="flex justify-center h-100 align-center">
+    <ion-spinner name="circles"></ion-spinner>
+  </div>
+</ng-template>
